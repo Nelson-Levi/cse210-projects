@@ -4,13 +4,18 @@ class Program
 {
     static void Main(string[] args)
     {
-
+        // Ask the user to input their grade percentage
         Console.WriteLine("What is your grade percentage? ");
+        // Read the user's input AS A STRING
         string gradeInput = Console.ReadLine();
+        // Convert the string input to an integer (assuming the input is a valid number)
         int grade = int.Parse(gradeInput);
+        // Variable to hold the letter grade, initialized as an empty string
         string letterGrade = "";
 
+        // Calculate the last digit of the grade for determining the sign
         int lastDigit = grade % 10;
+        // Again, initialize the variable with an empty string
         string sign = "";
 
         if (lastDigit >= 7)

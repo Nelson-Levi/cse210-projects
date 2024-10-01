@@ -1,0 +1,15 @@
+class Resume
+
+* _name: string
+* _jobs: List<job>
+
+Display(): void
+
+class Job 
+
+* _company: string
+* _jobTitle: string
+* _startYear: int
+* _endYear: int
+
+Display():void

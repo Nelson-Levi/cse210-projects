@@ -22,9 +22,9 @@ public class Entry
         DateTime startTime = DateTime.Now;
         // Integer randomly decided. It can only go as high as the amount of strings in the _prompts list!
         // This allows you to add prompts without affecting functionality
-        int _randomIndex = random.Next(_prompts.Count);
+        int randomIndex = random.Next(_prompts.Count);
         // Randomly select a prompt.
-        _selectedPrompt = _prompts[_randomIndex];
+        _selectedPrompt = _prompts[randomIndex];
         Console.WriteLine(_selectedPrompt);
         Console.Write("> ");
         _journalInput = Console.ReadLine();

@@ -10,7 +10,6 @@ public class Entry
     public List<string> _prompts = new List<string> {
     "Who was the most interesting person you interacted with today?", "What was the best part of my day?", "How did I see the hand of the Lord in my life today?", "What was the strongest emotion I felt today?", "If I had one thing I could do over today, what would it be?"
     };
-    public int _timeSpent;
     public List<string> _completedEntries = new List<string> {};
 
     // call the random class, set a variable name, then set it equal to a new initiation of the Random() class

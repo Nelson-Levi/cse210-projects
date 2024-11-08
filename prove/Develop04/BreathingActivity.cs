@@ -8,6 +8,7 @@ public class BreathingActivity : Activity
         Description = "This activity will help you relax by walking through breathing in and out slowly. Clear your mind and focus on your breathing.";
     }
 
+    // Method for the Breathing Activity functionality. Write a string to the console, play the countdown, and repeat. The loop exits when the alloted time has passed.
     public void Breathe()
     {
         DateTime startTime = DateTime.Now;

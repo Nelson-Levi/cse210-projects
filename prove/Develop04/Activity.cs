@@ -6,6 +6,7 @@ public class Activity
     private string _description;
     private string _name;
 
+    // Allow other classes to access and write these private attributes
     public string Name
     {
         get { return _name; }
@@ -18,6 +19,7 @@ public class Activity
         set { _description = value; }
     }
 
+    // Base constructor
     public Activity()
     {
         _name = "Activity";

@@ -13,6 +13,8 @@ class Program
     static void Main(string[] args)
     {
         // Console.WriteLine("Hello Develop04 World!");
+
+        // Initialize variables and objects
         int userSelection = 0;
         int activitiesCount = 0;
         int breathingCount = 0;
@@ -24,6 +26,7 @@ class Program
         ListingActivity listingActivity = new ListingActivity();
         Console.WriteLine("Welcome to the Mindfulness Program!\nMenu Options:");
 
+        // Display menu to user
         while (userSelection != 4)
         {
             Console.WriteLine("   1. Start breathing activity\n   2. Start reflecting activity\n   3. Start listing activity\n   4. Quit");
@@ -32,6 +35,7 @@ class Program
 
             if (int.TryParse(input, out userSelection))
             {
+                // Switch case for menu selection.
                 switch (userSelection)
                 {
                     // Breathing Activity
@@ -48,12 +52,14 @@ class Program
                         reflectingCount++;
                         break;
 
+                    // Listing Activity
                     case 3:
                         listingActivity.ExecuteListingActivity();
                         activitiesCount++;
                         listingCount++;
                         break;
 
+                    // Quit
                     case 4:
                         Console.WriteLine("Thank you for using the mindfulness program.");
                         Console.WriteLine("Here are your results! ");

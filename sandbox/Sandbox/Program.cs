@@ -7,62 +7,117 @@ class Program
         
     }
 
-    public class Employee
+    abstract class SmartDevice
     {
+        private bool _IsOn;
         private string _name;
+        private DateTime _startTime;
+        public abstract void toggleOnOrOff();
 
-        public Employee(string name)
+        public TimeSpan GetOnDuration()
         {
-            _name = name;
-        }
-
-        public virtual double CalculatePay()
-        {
-            return 0;
-        }
-    }
-
-    public class Salary : Employee
-    {
-        private int _months;
-        private int _rate;
-
-        public Salary(string name, int months, int rate)
-          : base(name)
-        {
-            _months = months;
-            _rate = rate;
-        }
-
-        public override double CalculatePay()
-        {
-            return _months * _rate;
+            if (_isOn)
+            {
+                return DateTime.Now - _startTime;
+            }
+            else
+            {
+                return TimeSpan.Zero;
+            }
         }
     }
 
-    public class Hourly : Employee
+    public class SmartLight : SmartDevice
     {
-        private double _hours;
-        private double _wage;
+        private int _wattage;
 
-        public Hourly(string name, double hours, double wage)
-         : base(name)
+        public override void toggleOnOrOff()
         {
-            _hours = hours;
-            _wage = wage;
-        }
-
-        public override double CalculatePay()
-        {
-            return _hours * _wage;
+            _isOn = !_isOn;
         }
     }
 
-    public class Volunteer : Employee
+    public class SmartHeater : SmartDevice
     {
-        public Volunteer(string name)
-         : base(name)
-         {
-         }
+        private int _temperature;
+        public override void toggleOnOrOff()
+        {
+            if (_isOn == true)
+            {
+                _isOn = false;
+            }
+
+            else
+            {
+                _isOn = true;
+            }
+        }
+    }
+
+    public class SmartTV : SmartDevice
+    {
+        private float _pixelCount;
+
+        public override void toggleOnOrOff()
+        {
+            if (_isOn == true)
+            {
+                _isOn = false;
+            }
+
+            else
+            {
+                _isOn = true;
+            }
+        }
+    }
+
+    public class House
+    {
+        private List<Room> _rooms;
+    }
+
+    public class Room
+    {
+        private List<SmartDevice> _devices;
+
+        public void ToggleLights()
+        {
+            foreach (SmartDevice device in _devices)
+            {
+
+            }
+        }
+
+        public void ToggleOneDevice(SmartDevice device)
+        {
+            device.toggleOnOrOff();
+        }
+
+        public void ToggleAllDevices()
+        {
+            foreach (SmartDevice device in _devices)
+            {
+                device.toggleOnOrOff();
+            }
+        }
+
+        public void ReportAllDevices()
+        {
+            foreach (SmartDevice device in _devices)
+            {
+                Console.WriteLine($"{device._name}: {device._IsOn}");
+            }
+        }
+
+        public void ReportLongestDevice()
+        {
+            foreach (SmartDevice device in _devices)
+            {
+                device.
+                DateTime.Compare
+            }
+        }
+
     }
 }

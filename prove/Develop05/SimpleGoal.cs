@@ -3,7 +3,6 @@ public class SimpleGoal : Goal
     public SimpleGoal(string name, string description, double pointAmount) : base (name, description, pointAmount)
     {}
 
-    // I'll have to come back for this later when I have a way to add to total point amounts.
     public override void CompleteGoal(User user)
     {
         IsCompleted = true;

@@ -10,7 +10,7 @@ class Program
         CyclingActivity cycling = new CyclingActivity("7 Jul 2024", 60, 5);
         SwimmingActivity swimming = new SwimmingActivity("9 Jun 2023", 45, 100);
 
-        List<Activity> activitiesList = new List<Activity> { running, cycling, swimming};
+        List<Activity> activitiesList = new List<Activity> {running, cycling, swimming};
         foreach (Activity activity in activitiesList)
         {
             Console.WriteLine(activity.GetSummary());

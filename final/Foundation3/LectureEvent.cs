@@ -15,7 +15,7 @@ public class LectureEvent : Event
     public override void DisplayFullDetails()
     {
         Console.WriteLine($"Event Type: {GetEventType()}\nTitle: {Title}");
-        Console.WriteLine($"Speaker Name: {_speaker} Capacity: {_capacity}");
+        Console.WriteLine($"Speaker Name: {_speaker}\nCapacity: {_capacity}");
         Console.WriteLine($"Description: {Description}");
         Console.WriteLine($"Date: {Date} Time: {Time}");
         Console.WriteLine(Address.GetDisplayableAddress());
